@@ -1,6 +1,7 @@
 STEP 1:
 
 export ANSIBLE_HOST_KEY_CHECKING=False
+
 ansible-playbook addtosudoers.yml -i hosts.yml -u cloudadmin --extra-vars "ansible_sudo_pass=password"
 
 STEP 2:
