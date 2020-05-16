@@ -27,7 +27,7 @@
        creates: metallb_secret.log
 
    - name: Setup Metallb. Use log to prevent second installation
-     shell: kubectl apply -f https://raw.githubusercontent.com/carterfieldslabs/k8s/master/metallb/metallb-config.yaml >> metallb_cm.log
+     shell: kubectl apply -f https://raw.githubusercontent.com/F1re4fect/my-k8s/master/kube/metallb/metallb-config.yaml >> metallb_cm.log
      args:
        chdir: $HOME
        creates: metallb_cm.log
