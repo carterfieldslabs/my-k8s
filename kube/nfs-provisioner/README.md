@@ -2,7 +2,7 @@
 
 ## Install on each client node
 
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt -y autoremove && sudo apt-get install -y nfs-common
+sudo apt install -y nfs-common
 
 # Setup Storage Node
 
