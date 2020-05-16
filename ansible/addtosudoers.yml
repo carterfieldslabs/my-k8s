@@ -1,0 +1,12 @@
+- hosts: all
+  user: cloudadmin
+  become: true
+  tasks:
+    - name: Add user "cloudadmin" to sudo
+      lineinfile:
+        path: /etc/sudoers.d/cloudadmin
+        line: 'cloudadmin ALL=(ALL) NOPASSWD: ALL'
+        state: present
+        mode: 0440
+        create: yes
+        validate: 'visudo -cf %s'
