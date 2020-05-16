@@ -12,7 +12,7 @@
 
   tasks:
     - name: Change root password
-      user: name=root password="$6$ESEF/uI5I.aBy$PgHGjCgyWAIl9g16KT4ajY7vXTzcMEif.ZqYrPJqfFW.0Y7Qr2/tcrJaVMm.wQnNZ5O2HsFrVrusKwSCJIKy6."
+      user: name=root password="password"
 
     - authorized_key:
         user: cloudadmin
