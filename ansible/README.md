@@ -23,3 +23,20 @@ ansible-playbook -i hosts.yml k8s-metallb.yml
 ansible-playbook -i hosts.yml k8s-istio.yml
 
 ansible-playbook -i hosts.yml k8s-jenkins.yml
+
+
+## SONARQUBE Setup
+
+kubectl create ns ns-sonarqube
+
+kubectl create secret generic postgres-pwd --from-literal=password=1nt0thew1ld -n ns-sonarqube
+
+kubectl create -f sonar-pvc-postgres.yml
+
+kubectl create -f sonar-postgres-deployment.yml
+kubectl create -f sonar-postgres-service.yml
+
+kubectl create -f sonarqube-deployment.yml
+kubectl create -f sonarqube-service.yml
+
+# Go to sonarqube IP login with admin/admin
